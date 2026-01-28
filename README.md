@@ -8,6 +8,13 @@ This project is a risk-assessment workflow designed for **SMEs (Small and Medium
 
 > Goal: help a user understand *what’s risky, why it’s risky, and what to fix first*.
 
+The repository includes:
+```
+A web application interface (Vite + Ionic)
+End-to-end testing via Cypress
+Python dependencies for analytical / ML workflows
+Configuration for cross-platform deployment (Capacitor)
+``` 
 ---
 ### What this project does
 
@@ -27,6 +34,10 @@ This project is a risk-assessment workflow designed for **SMEs (Small and Medium
 
 ### Setup
 ```
+Prerequisites
+Node.js + npm
+Python
+
  1) Create and activate a virtual environment (Windows)
 python -m venv .venv
 .venv\Scripts\activate
@@ -34,13 +45,40 @@ python -m venv .venv
 2) Install dependencies
 pip install -r requirements.txt
 
+3) Frontend
+npm install
+npm run dev
+
+4) Tests (Cypress)
+npm run test
+
 ```
 
-### Risk Scoring Approach (high level)
+
+### Project Goals
 ```
-The scoring approach is designed to be explainable:
-- Each category/control can contribute a weighted impact
-- Missing or weak evidence increases risk
-- Results are presented with short explanations so scores are auditable
+The platform focuses on:
+Converting qualitative compliance inputs into structured representations
+Highlighting missing or weak controls
+Producing interpretable risk indicators
+Supporting SME decision-making through transparent scoring logic
+
+High-level workflow:
+User provides internal compliance or operational data
+Data is processed and normalized
+Risk factors are identified
+Results are surfaced through the frontend interface
+Python tooling supports scoring / analysis logic
+The design emphasizes explainability over black-box prediction.
 ```
 
+### Future Enhancements
+```
+Planned or possible extensions:
+Streamlit or dashboard integration for analytics visualization
+Expanded risk scoring models
+NLP-based document ingestion
+External framework comparison
+Role-based UI flows
+Deployment to cloud environments
+``` 
